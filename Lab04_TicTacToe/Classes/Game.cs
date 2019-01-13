@@ -11,7 +11,6 @@ namespace Lab04_TicTacToe.Classes
         public Player Winner { get; set; }
         public Board Board { get; set; }
 
-
         /// <summary>
         /// Require 2 players and a board to start a game. 
         /// </summary>
@@ -30,9 +29,7 @@ namespace Lab04_TicTacToe.Classes
         /// <returns>Winner</returns>
         public Player Play()
         {
-
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
-
             /*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
              * 
@@ -45,11 +42,6 @@ namespace Lab04_TicTacToe.Classes
                 and make sure that the game continues while there are unmarked spots on the board. 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-            //Player PlayerOne = new Player();
-            //Player PlayerTwo = new Player();
-
-            //Board board = new Board();
-
             Player thePlayer;
             int GetPostion = 0;
 
@@ -62,8 +54,7 @@ namespace Lab04_TicTacToe.Classes
                 GetPostion++;
                 Console.Clear();
             }
-
-            return null;
+            return null;         
         }
 
 
@@ -142,7 +133,5 @@ namespace Lab04_TicTacToe.Classes
                 PlayerTwo.IsTurn = false;
             }
         }
-
-
     }
 }
