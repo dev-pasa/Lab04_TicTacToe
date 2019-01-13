@@ -29,10 +29,13 @@ namespace Lab04_TicTacToe.Classes
                 desiredCoordinate = PositionForNumber(position);
             }
             return desiredCoordinate;
-
         }
 
-
+        /// <summary>
+        /// If the user inputs a number, it will replace that number with and X or O
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public static Position PositionForNumber(int position)
         {
             switch (position)
@@ -56,7 +59,7 @@ namespace Lab04_TicTacToe.Classes
         {
             IsTurn = true;
 
-            Console.WriteLine($"{Name} it is your turn");
+            Console.WriteLine($"Select a number from the board {Name}.");
 
             Position position = GetPosition(board);
 
