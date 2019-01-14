@@ -25,7 +25,6 @@ namespace Lab04_TicTacToe
                 Name = playerOneName,
                 Marker = "X",
                 IsTurn = true
-
             };
 
             Console.WriteLine();
@@ -38,7 +37,6 @@ namespace Lab04_TicTacToe
                 Name = playerTwoName,
                 Marker = "O",
                 IsTurn = true
-
             };
 
             //create a new game here

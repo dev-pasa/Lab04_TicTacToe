@@ -43,9 +43,10 @@ namespace Lab04_TicTacToe.Classes
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
             Player thePlayer;
-            int GetPostion = 0;
+            int GetPostion = 1;
+            //or GetPostin = 0 and GetPosition < 9
 
-            while (!CheckForWinner(Board) && GetPostion < 9)
+            while (!CheckForWinner(Board) && GetPostion < 10)
             {
                 Board.DisplayBoard();
                 thePlayer = NextPlayer();
@@ -54,7 +55,10 @@ namespace Lab04_TicTacToe.Classes
                 GetPostion++;
                 Console.Clear();
             }
-            return null;         
+
+            return null;
+            
+                   
         }
 
 
@@ -94,16 +98,13 @@ namespace Lab04_TicTacToe.Classes
                 // return true if a winner has been reached. 
 
                 //if statement
-
                 if (a == b && a == c)
                 {
                     return true;
                 }
             }
-
             return false;
         }
-
 
         /// <summary>
         /// Determine next player
