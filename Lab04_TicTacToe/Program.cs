@@ -29,7 +29,7 @@ namespace Lab04_TicTacToe
 
             Console.WriteLine();
             Console.WriteLine("Second Player will need to enter the name.");
-            Console.Write("Player one, enter your name: ");
+            Console.Write("Player two, enter your name: ");
             string playerTwoName = Console.ReadLine();
 
             Player playerTwo = new Player
