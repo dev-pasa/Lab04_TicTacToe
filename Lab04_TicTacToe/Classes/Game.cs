@@ -42,7 +42,7 @@ namespace Lab04_TicTacToe.Classes
                 and make sure that the game continues while there are unmarked spots on the board. 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-            Player thePlayer;
+            Player thePlayer = new Player();
             int GetPostion = 1;
             //or GetPostin = 0 and GetPosition < 9
 
@@ -56,8 +56,12 @@ namespace Lab04_TicTacToe.Classes
                 Console.Clear();
             }
 
-            return null;
-            
+          if(CheckForWinner(Board) == true)
+            {
+               Winner = thePlayer;
+            }
+
+            return Winner;
                    
         }
 
@@ -122,10 +126,7 @@ namespace Lab04_TicTacToe.Classes
         {
             if (PlayerOne.IsTurn)
             {
-
                 PlayerOne.IsTurn = false;
-
-
                 PlayerTwo.IsTurn = true;
             }
             else
