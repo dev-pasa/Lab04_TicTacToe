@@ -54,7 +54,10 @@ namespace Lab04_TicTacToe.Classes
             }
         }
 
-
+        /// <summary>
+        /// Take turn for each player
+        /// </summary>
+        /// <param name="board"></param>
         public void TakeTurn(Board board)
         {
             IsTurn = true;

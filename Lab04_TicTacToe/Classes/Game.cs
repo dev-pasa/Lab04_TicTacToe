@@ -65,7 +65,6 @@ namespace Lab04_TicTacToe.Classes
                    
         }
 
-
         /// <summary>
         /// Check if winner exists
         /// </summary>
