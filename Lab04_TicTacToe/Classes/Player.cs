@@ -7,14 +7,17 @@ namespace Lab04_TicTacToe.Classes
 {
     public class Player
     {
+        /// <summary>
+        /// set the name
+        /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// P1 is X and P2 will be O
+        /// set the marker
         /// </summary>
         public string Marker { get; set; }
 
         /// <summary>
-        /// Flag to determine if it is the user's turn
+        /// check for user's turn
         /// </summary>
         public bool IsTurn { get; set; }
 
@@ -58,7 +61,7 @@ namespace Lab04_TicTacToe.Classes
         /// Take turn for each player
         /// </summary>
         /// <param name="board"></param>
-        public void TakeTurn(Board board)
+        public bool TakeTurn(Board board)
         {
             IsTurn = true;
 
@@ -66,14 +69,16 @@ namespace Lab04_TicTacToe.Classes
 
             Position position = GetPosition(board);
 
-            if (Int32.TryParse(board.GameBoard[position.Row, position.Column], out int _))
-            {
-                board.GameBoard[position.Row, position.Column] = Marker;
+             if (Int32.TryParse(board.GameBoard[position.Row, position.Column], out int _))
+                {
+                    board.GameBoard[position.Row, position.Column] = Marker;
+                return true;
             }
             else
             {
-                Console.WriteLine("This space is already occupied");
+                return false;
             }
+
         }
     }
 }
